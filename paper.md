@@ -30,6 +30,6 @@ $A x = b$
 
 # Test citations
 
-@kelley:2022
+@kelley:2022b is a book. @kelley:2022a is a paper.
 
 # References
