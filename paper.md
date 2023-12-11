@@ -29,13 +29,21 @@ Who cares?
 $A x = b$
 
 __IR(A, b)__
+
 - $x = 0$
+
 - $r = b$
+  
 - Factor $A = LU$ in a lower precision
+  
 - While $\|| r \||$ is too large
+  
   - $d = (LU)^{-1} r$
+    
   - $x = x + d$
+    
   - $r = b - Ax$
+    
 - end
 
 # Test citations
