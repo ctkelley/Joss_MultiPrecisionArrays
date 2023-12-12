@@ -18,11 +18,11 @@ bibliography: paper.bib
 
 # Summary
 
-[MultiPrecisionArrays.jl](https://github.com/ctkelley/MultiPrecisionArrays.jl)  provides data structures and
+[MultiPrecisionArrays.jl](https://github.com/ctkelley/MultiPrecisionArrays.jl)  @kelley:2023b provides data structures and
 solvers for several variations of iterative refinement (IR). IR can speed up an LU matrix factorization 
 by factoring a low precision copy and using the low precision factorization in a residual correction loop.
 The additional storage cost is the low precision copy, so IR is at time vs storage tradeoff. IR is an old
-algorithm and a good account of the classical theory is in 
+algorithm and a good account of the classical theory is in @higham:1996.
 
 # Statement of need
 
@@ -30,6 +30,27 @@ Who cares?
 
 # Mathematics
 
+This package will make solving dense systems of linear equations faster by using the LU factorization and IR. It is limited to LU for now. A very generic description of this for solving a linear system $A x = b$ is
+
+__IR(A, b)__
+
+- $x = 0$
+
+- $r = b$
+
+- Factor $A = LU$ in a lower precision
+
+- While $\|| r \||$ is too large
+
+  - $d = (LU)^{-1} r$
+
+  - $x = x + d$
+
+  - $r = b - Ax$
+
+- end
+
+- end
 
 
 In Julia, a code to do this would solve the linear system $A x = b$ in double precision by using a
@@ -48,7 +69,7 @@ factor the low precision copy.
 
 # Example
 
-Herewith, the world's most simple example to show how iterative refienment works. We will follow that with some benchmarking on the cost of factorizations.
+Here is a simple example to show how iterative refienment works. We will follow that with some benchmarking on the cost of factorizations.
 The functions we use are __MPArray__ to create the structure and __mplu!__ to factor the low precision copy. In this example high precision is ```Float64``` and low
 precision is ```Float32```. The matrix is the sum of the identity and a constant multiple of the trapezoid rule discretization of the Greens operator for $-d^2/dx^2$ on $[0,1]$
 
