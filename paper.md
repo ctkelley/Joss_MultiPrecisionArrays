@@ -78,19 +78,19 @@ Here is a simple example to show how iterative refienment works. We will follow 
 The functions we use are __MPArray__ to create the structure and __mplu!__ to factor the low precision copy. In this example high precision is ```Float64``` and low
 precision is ```Float32```. The matrix is the sum of the identity and a constant multiple of the trapezoid rule discretization of the Greens operator for $-d^2/dx^2$ on $[0,1]$
 
-```math
+$$
 G u(x) = \int_0^1 g(x,y) u(y) \, dy 
-```
+$$
 
 where
 
-```math
+$$
 g(x,y) =
-    \left\{\begin{array}{c}
+    \\left\\{\begin{array}{c}
         y (1-x) ; \ x > y\\
         x (1-y) ; \ x \le y 
-    \end{array}\right.
-```
+    \end{array}\\right.
+$$
 
 
 The code for this is in the __/src/Examples__ directory. The file is __Gmat.jl__. You need to do 
