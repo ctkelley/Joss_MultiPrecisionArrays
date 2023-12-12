@@ -18,7 +18,7 @@ bibliography: paper.bib
 
 # Summary
 
-[MultiPrecisionArrays.jl](https://github.com/ctkelley/MultiPrecisionArrays.jl) @kelley:2023b provides data structures and
+[MultiPrecisionArrays.jl](https://github.com/ctkelley/MultiPrecisionArrays.jl)  provides data structures and
 solvers for several variations of iterative refinement (IR). IR can speed up an LU matrix factorization 
 by factoring a low precision copy and using the low precision factorization in a residual correction loop.
 The additional storage cost is the low precision copy, so IR is at time vs storage tradeoff. IR is an old
@@ -30,26 +30,6 @@ Who cares?
 
 # Mathematics
 
-
-__IR(A, b)__
-
-- $x = 0$
-
-- $r = b$
-  
-- Factor $A = LU$ in a lower precision
-  
-- While $\|| r \||$ is too large
-  
-  - $d = (LU)^{-1} r$
-    
-  - $x = x + d$
-    
-  - $r = b - Ax$
-    
-  - end
-    
-- end
 
 
 In Julia, a code to do this would solve the linear system $A x = b$ in double precision by using a
