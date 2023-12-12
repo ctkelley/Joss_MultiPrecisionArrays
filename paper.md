@@ -18,6 +18,9 @@ bibliography: paper.bib
 
 # Summary
 
+[MultiPrecisionArrays.jl](https://github.com/ctkelley/MultiPrecisionArrays.jl) provides data structures and
+solvers for several variations of iterative refinement (IR).
+
 What is iterative refinement?
 
 # Statement of need
