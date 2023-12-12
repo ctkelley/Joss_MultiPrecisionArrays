@@ -84,6 +84,15 @@ G u(x) = \int_0^1 g(x,y) u(y) \, dy
 
 where
 
+```math
+g(x,y) =
+    \left\{\begin{array}{c}
+        y (1-x) ; \ x > y\\
+        x (1-y) ; \ x \le y 
+    \end{array}\right.
+```
+
+
 The code for this is in the __/src/Examples__ directory. The file is __Gmat.jl__. You need to do 
 ```
 using MultiPrecisionArrays
