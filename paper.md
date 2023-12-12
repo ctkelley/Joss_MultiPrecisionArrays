@@ -22,7 +22,7 @@ bibliography: paper.bib
 solvers for several variations of iterative refinement (IR). IR can speed up an LU matrix factorization 
 by factoring a low precision copy and using the low precision factorization in a residual correction loop.
 The additional storage cost is the low precision copy, so IR is at time vs storage tradeoff. IR is an old
-algorithm and a good account of the classical theory is in @higham:1996 .
+algorithm and a good account of the classical theory is in 
 
 # Statement of need
 
