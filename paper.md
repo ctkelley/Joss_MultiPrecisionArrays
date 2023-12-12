@@ -49,6 +49,9 @@ __IR(A, b)__
   - $x = x + d$
     
   - $r = b - Ax$
+    
+  - end
+    
 - end
 
 In Julia, a code to do this would solve the linear system $A x = b$ in double precision by using a
