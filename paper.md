@@ -32,25 +32,7 @@ Who cares?
 
 This package will make solving dense systems of linear equations faster by using the LU factorization and IR. It is limited to LU for now. A very generic description of this for solving a linear systrem $A x = b$ is
 
-__IR(A, b)__
 
-- $x = 0$
-
-- $r = b$
-  
-- Factor $A = LU$ in a lower precision
-  
-- While $\|| r \||$ is too large
-  
-  - $d = (LU)^{-1} r$
-    
-  - $x = x + d$
-    
-  - $r = b - Ax$
-    
-  - end
-    
-- end
 
 In Julia, a code to do this would solve the linear system $A x = b$ in double precision by using a
 factorization in a lower precision, say single, within a residual correction iteration. This means that one would need
