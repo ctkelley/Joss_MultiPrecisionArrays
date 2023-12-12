@@ -18,7 +18,7 @@ bibliography: paper.bib
 
 # Summary
 
-[MultiPrecisionArrays.jl](https://github.com/ctkelley/MultiPrecisionArrays.jl)  @kelley:2023b provides data structures and
+[MultiPrecisionArrays.jl](https://github.com/ctkelley/MultiPrecisionArrays.jl)  @kelley:2023a, @kelley:2023b provides data structures and
 solvers for several variations of iterative refinement (IR). IR can speed up an LU matrix factorization 
 by factoring a low precision copy and using the low precision factorization in a residual correction loop.
 The additional storage cost is the low precision copy, so IR is at time vs storage tradeoff. IR is an old
@@ -28,7 +28,7 @@ algorithm and a good account of the classical theory is in @higham:1996.
 
 Who cares?
 
-# Mathematics
+# Algorithm
 
 This package will make solving dense systems of linear equations faster by using the LU factorization and IR. It is limited to LU for now. A very generic description of this for solving a linear system $A x = b$ is
 
@@ -67,6 +67,11 @@ one incurs the storage penalty of making a low
 precision copy of $A$ and reaps the benefit of only having to
 factor the low precision copy.
 
+# Installation
+
+The standard way to install a package is to type ```import.Pkg; Pkg.add("MultiPrecisionArrays")``` at the Julia prompt. One can run the unit tests with ```Pkg.test("MultiPrecisionArrays")```.
+After installation, type ```using MultiPrecisionArrays``` when you want to use the functions in the package.
+
 # Example
 
 Here is a simple example to show how iterative refienment works. We will follow that with some benchmarking on the cost of factorizations.
@@ -81,6 +86,7 @@ where
 
 The code for this is in the __/src/Examples__ directory. The file is __Gmat.jl__. You need to do 
 ```
+using MultiPrecisionArrays
 using MultiPrecisionArrays.Examples
 ```
 to get to it.
