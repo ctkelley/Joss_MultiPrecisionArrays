@@ -58,14 +58,6 @@ $$
 
 where
 
-$$
-g(x,y) = \\left\\{ \begin{array}{l} 
-y (1 - x) \ \mbox{if x > y} \\
-x (1 -y ) \ \mbox{otherwise}
-\end{array}
-\\right.
-$$
-
 The code for this is in the __/src/Examples__ directory. The file is __Gmat.jl__. You need to do 
 ```
 using MultiPrecisionArrays.Examples
