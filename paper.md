@@ -32,8 +32,6 @@ Who cares?
 
 This package will make solving dense systems of linear equations faster by using the LU factorization and IR. It is limited to LU for now. A very generic description of this for solving a linear systrem $A x = b$ is
 
-$A x = b$
-
 __IR(A, b)__
 
 - $x = 0$
