@@ -138,7 +138,7 @@ Errors: 8.88178e-16, 7.41629e-14. Residuals: 1.33243e-15, 7.40609e-14
 
 So the resuts are equally good.
 
-The compute time for ```mplu``` should be half that of ```lu```.
+The compute time for ```mplu``` should be roughly half that of ```lu```.
 
 
 
