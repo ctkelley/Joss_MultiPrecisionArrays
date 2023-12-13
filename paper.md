@@ -89,7 +89,7 @@ g(x,y) =
     \\biggl\\{\begin{array}{c}
         y (1-x) ; \ x > y\\
         x (1-y) ; \ x \le y 
-    \end{array}
+    \end{array}\\biggr.
 $$
 
 
