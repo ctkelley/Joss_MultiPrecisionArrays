@@ -85,12 +85,11 @@ $$
 where
 
 $$
-g(x,y) = {
-    \\biggl\\{\begin{array}{c}
+g(x,y) = 
+  \begin{array}{c}
         y (1-x) ; \ x > y\\
         x (1-y) ; \ x \le y 
-    \end{array}\\biggr.
-    }
+    \end{array}
 $$
 
 
