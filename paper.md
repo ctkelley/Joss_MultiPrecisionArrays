@@ -28,6 +28,19 @@ algorithm and a good account of the classical theory is in @higham:1996.
 
 Who cares?
 
+
+The package 
+[IterativeRefinemen.jl](https://github.com/RalphAS/IterativeRefinement.jl)
+is an implementation of the IR method from 
+@dongarra:1983. 
+
+The unregistered
+package [Itref.jl](https://github.com/bvieuble/Itref.jl) implements
+IR and the GMRES-IR method from @amestoy:2023 and was used to obtain
+the numerical results in that paper. It does not provide the
+data structures for preallocation that we do and does not seem to have
+been updated lately.
+
 # Algorithm
 
 This package will make solving dense systems of linear equations faster by using the LU factorization and IR. It is limited to LU for now. A very generic description of this for solving a linear system $A x = b$ is
