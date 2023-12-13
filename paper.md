@@ -173,12 +173,8 @@ julia> @belapsed lu($A)
 It is no surprise that the factorization in single precision took roughly half as long as the one in double. In the double-single precision case, iterative refinement is a great
 expample of a time/storage tradeoff. You have to store a low precision copy of $A$, so the storage burden increases by 50\% and the factoriztion time is cut in half.
 
-# Test citations
 
-@kelley:2022b is a book. @kelley:2022a is a paper.
 
-@kelley:2023a is the newest paper
 
-The package lives here @kelley2023b
 
 # References
