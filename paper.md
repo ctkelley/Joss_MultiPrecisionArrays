@@ -26,13 +26,10 @@ algorithm and a good account of the classical theory is in @higham:1996.
 
 # Statement of need
 
-Who cares?
-
-
 The package 
-[IterativeRefinemen.jl](https://github.com/RalphAS/IterativeRefinement.jl)
+[IterativeRefinement.jl](https://github.com/RalphAS/IterativeRefinement.jl)
 is an implementation of the IR method from 
-@dongarra:1983. 
+@dongarra:1983. It has not been updated in four years.
 
 The unregistered
 package [Itref.jl](https://github.com/bvieuble/Itref.jl) implements
