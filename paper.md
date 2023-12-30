@@ -50,7 +50,7 @@ __IR(A, b)__
 
 - Factor $A = LU$ in a lower precision
 
-- While $\|| r \||$ is too large
+- While $\| r \|$ is too large
 
   - $d = (LU)^{-1} r$
 
